@@ -1,0 +1,11 @@
+
+
+bin
+lib
+etc
+
+_projects/rlp_core/_gen/
+                  /bin/
+                  /lib/
+                  /include/
+                  /etc/

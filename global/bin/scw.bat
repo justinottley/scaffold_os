@@ -1,0 +1,5 @@
+@echo off
+SETLOCAL
+set /p VC_VERSION=<%~dp0\VC_VERSION
+__SCAFFOLD_INST_SUBST__\%VC_VERSION%\bin\scw.bat %*
+ENDLOCAL

@@ -1,0 +1,2587 @@
+{
+  "namespace": {
+    "name": "",
+    "inline": false,
+    "doxygen": null,
+    "classes": [
+      {
+        "class_decl": {
+          "typename": {
+            "segments": [
+              {
+                "name": "GUI_IconButton",
+                "specialization": null
+              }
+            ],
+            "classkey": "class",
+            "has_typename": false
+          },
+          "bases": [
+            {
+              "access": "public",
+              "typename": {
+                "segments": [
+                  {
+                    "name": "GUI_ButtonBase",
+                    "specialization": null
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "virtual": false,
+              "param_pack": false
+            }
+          ],
+          "template": null,
+          "explicit": false,
+          "final": false,
+          "doxygen": null,
+          "access": null
+        },
+        "classes": [],
+        "enums": [],
+        "fields": [
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "QPixmap",
+                    "specialization": null
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_icon",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "ptr_to": {
+                "typename": {
+                  "segments": [
+                    {
+                      "name": "GUI_SvgIcon",
+                      "specialization": null
+                    }
+                  ],
+                  "classkey": null,
+                  "has_typename": false
+                },
+                "const": false,
+                "volatile": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_svgIcon",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "bool"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_svgIconRight",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "bool"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_svgIconShowOnHover",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "QString",
+                    "specialization": null
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_text",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "QString",
+                    "specialization": null
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_filename",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "bool"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_showMenuOnHover",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "int"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_padding",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "int"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_iconHOffset",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "int"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_iconYOffset",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "int"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_textHOffset",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "int"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_textYOffset",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "int"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_menuYOffset",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "bool"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_drawOutline",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "QColor",
+                    "specialization": null
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_outlineBgCol",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "QColor",
+                    "specialization": null
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_hoverCol",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          },
+          {
+            "access": "protected",
+            "type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "bool"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": "_toggled",
+            "value": null,
+            "bits": null,
+            "constexpr": false,
+            "mutable": false,
+            "static": false,
+            "doxygen": null
+          }
+        ],
+        "friends": [],
+        "methods": [
+          {
+            "return_type": null,
+            "name": {
+              "segments": [
+                {
+                  "name": "GUI_IconButton",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QString",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "filename",
+                "default": null,
+                "param_pack": false
+              },
+              {
+                "type": {
+                  "ptr_to": {
+                    "typename": {
+                      "segments": [
+                        {
+                          "name": "GUI_ItemBase",
+                          "specialization": null
+                        }
+                      ],
+                      "classkey": null,
+                      "has_typename": false
+                    },
+                    "const": false,
+                    "volatile": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "parent",
+                "default": null,
+                "param_pack": false
+              },
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "size",
+                "default": {
+                  "tokens": [
+                    {
+                      "value": "15",
+                      "type": "INT_CONST_DEC"
+                    }
+                  ]
+                },
+                "param_pack": false
+              },
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "padding",
+                "default": {
+                  "tokens": [
+                    {
+                      "value": "4",
+                      "type": "INT_CONST_DEC"
+                    }
+                  ]
+                },
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": true,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "mousePressEvent",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "ptr_to": {
+                    "typename": {
+                      "segments": [
+                        {
+                          "name": "QMouseEvent",
+                          "specialization": null
+                        }
+                      ],
+                      "classkey": null,
+                      "has_typename": false
+                    },
+                    "const": false,
+                    "volatile": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "event",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": true,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "hoverEnterEvent",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "ptr_to": {
+                    "typename": {
+                      "segments": [
+                        {
+                          "name": "QHoverEvent",
+                          "specialization": null
+                        }
+                      ],
+                      "classkey": null,
+                      "has_typename": false
+                    },
+                    "const": false,
+                    "volatile": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "event",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": true,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "hoverLeaveEvent",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "ptr_to": {
+                    "typename": {
+                      "segments": [
+                        {
+                          "name": "QHoverEvent",
+                          "specialization": null
+                        }
+                      ],
+                      "classkey": null,
+                      "has_typename": false
+                    },
+                    "const": false,
+                    "volatile": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "event",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": true,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "QRectF",
+                    "specialization": null
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "boundingRect",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": true,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "paint",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "ptr_to": {
+                    "typename": {
+                      "segments": [
+                        {
+                          "name": "QPainter",
+                          "specialization": null
+                        }
+                      ],
+                      "classkey": null,
+                      "has_typename": false
+                    },
+                    "const": false,
+                    "volatile": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "painter",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": true,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "ptr_to": {
+                "typename": {
+                  "segments": [
+                    {
+                      "name": "GUI_IconButton",
+                      "specialization": null
+                    }
+                  ],
+                  "classkey": null,
+                  "has_typename": false
+                },
+                "const": false,
+                "volatile": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "new_GUI_IconButton",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QString",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "filename",
+                "default": null,
+                "param_pack": false
+              },
+              {
+                "type": {
+                  "ptr_to": {
+                    "typename": {
+                      "segments": [
+                        {
+                          "name": "GUI_ItemBase",
+                          "specialization": null
+                        }
+                      ],
+                      "classkey": null,
+                      "has_typename": false
+                    },
+                    "const": false,
+                    "volatile": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "parent",
+                "default": null,
+                "param_pack": false
+              },
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "size",
+                "default": {
+                  "tokens": [
+                    {
+                      "value": "15",
+                      "type": "INT_CONST_DEC"
+                    }
+                  ]
+                },
+                "param_pack": false
+              },
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "padding",
+                "default": {
+                  "tokens": [
+                    {
+                      "value": "4",
+                      "type": "INT_CONST_DEC"
+                    }
+                  ]
+                },
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": true,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "onButtonPressed",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QVariantMap",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "metadata",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "onMenuItemSelected",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QVariantMap",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "sigData",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setShowMenuOnHover",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "bool"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "smoh",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setOutlined",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "bool"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "outlined",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setOutlinedBgColour",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QColor",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "col",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setHoverColour",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QColor",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "col",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setSvgIconPath",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QString",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "filename",
+                "default": null,
+                "param_pack": false
+              },
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "size",
+                "default": {
+                  "tokens": [
+                    {
+                      "value": "-",
+                      "type": "-"
+                    },
+                    {
+                      "value": "1",
+                      "type": "INT_CONST_DEC"
+                    }
+                  ]
+                },
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setSvgIconRight",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "bool"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "doRight",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setSvgIconShowOnHover",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "bool"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "ssh",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "hideMenu",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "ptr_to": {
+                "typename": {
+                  "segments": [
+                    {
+                      "name": "GUI_SvgIcon",
+                      "specialization": null
+                    }
+                  ],
+                  "classkey": null,
+                  "has_typename": false
+                },
+                "const": false,
+                "volatile": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "svgIcon",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setText",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QString",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "text",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "QString",
+                    "specialization": null
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "text",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setIconHOffset",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "offset",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setIconYOffset",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "offset",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setTextHOffset",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "offset",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setTextYOffset",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "offset",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setMenuYOffset",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "int"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "offset",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "void"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "setToggled",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "bool"
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "isToggled",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "typename": {
+                "segments": [
+                  {
+                    "name": "bool"
+                  }
+                ],
+                "classkey": null,
+                "has_typename": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "toggled",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": true,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          },
+          {
+            "return_type": {
+              "ptr_to": {
+                "typename": {
+                  "segments": [
+                    {
+                      "name": "GUI_MenuItem",
+                      "specialization": null
+                    }
+                  ],
+                  "classkey": null,
+                  "has_typename": false
+                },
+                "const": false,
+                "volatile": false
+              },
+              "const": false,
+              "volatile": false
+            },
+            "name": {
+              "segments": [
+                {
+                  "name": "addAction",
+                  "specialization": null
+                }
+              ],
+              "classkey": null,
+              "has_typename": false
+            },
+            "parameters": [
+              {
+                "type": {
+                  "typename": {
+                    "segments": [
+                      {
+                        "name": "QString",
+                        "specialization": null
+                      }
+                    ],
+                    "classkey": null,
+                    "has_typename": false
+                  },
+                  "const": false,
+                  "volatile": false
+                },
+                "name": "itemName",
+                "default": null,
+                "param_pack": false
+              }
+            ],
+            "vararg": false,
+            "doxygen": null,
+            "constexpr": false,
+            "extern": false,
+            "static": false,
+            "inline": false,
+            "has_body": false,
+            "has_trailing_return": false,
+            "template": null,
+            "throw": null,
+            "noexcept": null,
+            "msvc_convention": null,
+            "operator": null,
+            "access": "public",
+            "const": false,
+            "volatile": false,
+            "ref_qualifier": null,
+            "constructor": false,
+            "explicit": false,
+            "default": false,
+            "deleted": false,
+            "destructor": false,
+            "pure_virtual": false,
+            "virtual": false,
+            "final": false,
+            "override": false
+          }
+        ],
+        "typedefs": [],
+        "forward_decls": [],
+        "using": [],
+        "using_alias": []
+      }
+    ],
+    "enums": [],
+    "functions": [],
+    "method_impls": [],
+    "typedefs": [],
+    "variables": [],
+    "forward_decls": [],
+    "using": [],
+    "using_ns": [],
+    "using_alias": [],
+    "ns_alias": [],
+    "concepts": [],
+    "template_insts": [],
+    "namespaces": {}
+  },
+  "pragmas": [],
+  "includes": [
+    {
+      "filename": "\"RlpGui/WIDGET/Global.h\""
+    },
+    {
+      "filename": "\"RlpGui/BASE/ButtonBase.h\""
+    },
+    {
+      "filename": "\"RlpGui/BASE/SvgIcon.h\""
+    },
+    {
+      "filename": "\"RlpGui/MENU/MenuPane.h\""
+    }
+  ]
+}

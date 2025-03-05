@@ -1,0 +1,273 @@
+#!/usr/bin/env python3
+#
+# Copyright 2014-2024 Justin Ottley
+#
+# Licensed under the terms set forth in the LICENSE.txt file
+#
+
+import os
+import sys
+import logging
+import argparse
+import platform
+import subprocess
+
+LOG = logging.getLogger('sc_build')
+
+ARGS = None
+
+SRC_GLOBAL_DIR = None
+SRC_ROOT_DIR = None
+
+INST_ROOT_DIR = None
+INST_DIR = None
+
+
+def init_logging():
+
+    formatter = logging.Formatter(
+        '%(name)-10s [ %(levelname)s ] : %(message)s')
+
+    handler = logging.StreamHandler()
+    handler.setFormatter(formatter)
+
+    LOG.addHandler(handler)
+    LOG.setLevel(logging.DEBUG)
+
+    sc_logger = logging.getLogger('scaffold')
+    sc_logger.addHandler(handler)
+    sc_logger.setLevel(logging.DEBUG)
+
+
+def bootstrap(args):
+
+    scaffold_src = os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]), '../', 'src'))
+    scaffold_src_lib = os.path.join(scaffold_src, 'lib', 'python')
+    scaffold_src_global = os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]), '..', 'global'))
+
+    if not os.path.isdir(scaffold_src_lib):
+        raise Exception('bootstrap failed, path not found: {}'.format(scaffold_src_lib))
+
+    sys.path.insert(0, scaffold_src_lib)
+
+    import scaffold.variant
+
+    inst_root_dir = os.path.join(
+        args.prefix,
+        scaffold.variant.get_platform(),
+        'scaffold_root'
+    )
+    inst_dir = os.path.join(inst_root_dir, args.version)
+    
+    if os.path.isdir(inst_dir):
+        LOG.warning('CLEANING: {}'.format(inst_dir))
+
+        cmd = 'rm -rf {}'.format(inst_dir)
+        LOG.debug(cmd)
+
+        result = subprocess.run(cmd, shell=True)
+
+
+    if not os.path.isdir(inst_dir):
+        LOG.info('Creating {}'.format(inst_dir))
+        os.makedirs(inst_dir)
+
+    global SRC_ROOT_DIR, SRC_GLOBAL_DIR, INST_DIR, INST_ROOT_DIR
+    SRC_ROOT_DIR = scaffold_src
+
+    SRC_GLOBAL_DIR = scaffold_src_global
+
+    INST_ROOT_DIR = inst_root_dir
+    INST_DIR = inst_dir
+
+
+def run_build_lib():
+
+    global INST_DIR
+
+    import scaffold.variant
+    import scaffold.util
+
+    src_lib_dir = os.path.join(SRC_ROOT_DIR, 'lib', 'python')
+    inst_lib_dir = os.path.join(
+        INST_DIR, 'lib', scaffold.variant.get_python_dirname(), 'site-packages')
+
+    if not os.path.isdir(inst_lib_dir):
+        LOG.info('Creating {}'.format(inst_lib_dir))
+        os.makedirs(inst_lib_dir)
+
+    for lib_name in ['scaffold']:
+        lib_dir = os.path.join(src_lib_dir, lib_name)
+        dest_lib_dir = inst_lib_dir
+        if os.name == 'nt':
+            dest_lib_dir = os.path.join(inst_lib_dir, lib_name)
+
+        scaffold.util.copy_file(lib_dir, dest_lib_dir, recursive=True)
+
+
+def run_build_bin():
+
+    global INST_DIR
+    global SRC_ROOT_DIR
+
+    plat = 'Linux'
+    if os.name == 'nt':
+        plat = 'Windows'
+
+    if platform.system() == 'Darwin':
+        plat = 'Darwin'
+
+    src_bin_dirs = [
+        os.path.join(SRC_ROOT_DIR, 'bin'),
+        os.path.join(SRC_ROOT_DIR, 'bin_exec', plat)
+    ]
+    
+    for src_bin_dir in src_bin_dirs:
+    
+        import scaffold.util
+        inst_bin_dir = os.path.join(INST_DIR, 'bin')
+        if not os.path.isdir(inst_bin_dir):
+            LOG.info('Creating {}'.format(inst_bin_dir))
+            os.mkdir(inst_bin_dir)
+
+        for file_entry in os.listdir(src_bin_dir):
+            src_path = os.path.join(src_bin_dir, file_entry)
+            dest_path = os.path.join(inst_bin_dir, file_entry)
+
+            if os.name == 'posix':
+                dest_path = dest_path.replace('.py', '')
+                if file_entry in ['sc_wrapper']:
+                    _do_subst(src_path, dest_path)
+
+                else:
+                    scaffold.util.copy_file(src_path, dest_path)
+
+            elif os.name == 'nt':
+
+                if file_entry.endswith('.bat'):
+                    _do_subst(src_path, dest_path)
+                    # raise Exception('stop')
+
+                elif dest_path.endswith('.py'):
+
+                    scaffold.util.copy_file(src_path, dest_path)
+
+                    if file_entry != 'sc.py':
+
+                        bat_path = dest_path.replace('.py', '.bat')
+
+                        bat_script = '{} {} %*'.format(
+                            sys.executable, dest_path
+                        )
+                        with open(bat_path, 'w') as wfh:
+                            wfh.write(bat_script)
+
+                        print('Wrote {}'.format(bat_path))
+
+                else:
+                    scaffold.util.copy_file(src_path, dest_path)
+
+
+            else:
+                raise Excpetion('unsupported platform: {}'.format(os.name))
+
+
+            os.chmod(dest_path, 0o0777)
+
+
+def run_build_etc():
+
+    import scaffold.util
+
+    global INST_DIR
+    global SRC_ROOT_DIR
+
+    src_etc_dir = os.path.abspath(os.path.join(SRC_ROOT_DIR, '..', 'etc'))
+    inst_etc_dir = os.path.join(INST_DIR, 'etc')
+    if not os.path.isdir(inst_etc_dir):
+        LOG.info('Creating {}'.format(inst_etc_dir))
+        os.mkdir(inst_etc_dir)
+
+    for file_entry in os.listdir(src_etc_dir):
+        src_path = os.path.join(src_etc_dir, file_entry)
+        dest_path = os.path.join(inst_etc_dir, file_entry)
+
+        _do_subst(src_path, dest_path)
+
+
+def _do_subst(src_path, dest_path):
+
+    import scaffold.util
+    import scaffold.variant
+
+    global INST_ROOT_DIR, ARGS
+
+    src_map_list = [
+        ('__SCAFFOLD_PYTHON_BIN_SUBST__', sys.executable),
+        ('__SCAFFOLD_INST_SUBST__', INST_ROOT_DIR),
+        ('__SCAFFOLD_INST_VERSION__', ARGS.version),
+        ('__SC_PLATFORM__', scaffold.variant.get_platform()),
+        ('__SC_THIRDBASE_VERSION__', ARGS.tb_version)
+    ]
+
+    scaffold.util.do_subst(src_path, dest_path, src_map_list)
+
+
+def run_build_global():
+
+    global SRC_GLOBAL_DIR, SRC_ROOT_DIR
+
+    plat = 'Linux'
+    if os.name == 'nt':
+        plat = 'Windows'
+
+    src_global_bin_dirs = [
+        os.path.join(SRC_GLOBAL_DIR, 'bin')
+    ]
+
+    for src_global_bin_dir in src_global_bin_dirs:
+
+        dest_global_bin_dir = os.path.join(INST_ROOT_DIR, 'global', 'bin')
+
+        if not os.path.isdir(dest_global_bin_dir):
+            LOG.info('Creating {}'.format(dest_global_bin_dir))
+            os.makedirs(dest_global_bin_dir)
+
+
+        for file_entry in os.listdir(src_global_bin_dir):
+            src_path = os.path.join(src_global_bin_dir, file_entry)
+            dest_path = os.path.join(dest_global_bin_dir, file_entry)
+
+            _do_subst(src_path, dest_path)
+            os.chmod(dest_path, 0o0777)
+
+
+
+def main():
+    
+    prefix_default = os.path.join(os.path.expanduser('~'), 'dev', 'revlens_root', 'release')
+
+    parser = argparse.ArgumentParser('')
+    parser.add_argument('--prefix', default=prefix_default)
+    parser.add_argument('--tb_version', default='22_09')
+    parser.add_argument('--version', required=True)
+    parser.add_argument('--global', dest='build_global', action='store_true', default=False)
+    args = parser.parse_args()
+
+    global ARGS
+    ARGS = args
+
+
+    init_logging()
+    bootstrap(args)
+
+    run_build_lib()
+    run_build_bin()
+    run_build_etc()
+
+    if args.build_global:
+        run_build_global()
+
+
+if __name__ == '__main__':
+    main()

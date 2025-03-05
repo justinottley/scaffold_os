@@ -1,0 +1,11 @@
+{
+    "__bootstrap__": {
+        "buildsys.inst_dir": "__SCAFFOLD_INST_SUBST__/__SCAFFOLD_INST_VERSION__"
+    },
+    "sclib": {
+        "sclib.cls": "scaffold.env.sset.SclibSoftwareSet",
+        "translation_map": ["local"],
+        "sftset_version": "",
+        "sftset_type": "int"
+    }
+}

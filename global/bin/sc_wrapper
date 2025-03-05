@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export SC_PLATFORM=__SC_PLATFORM__
+export SC_THIRDBASE_VERSION=__SC_THIRDBASE_VERSION__
+
+if ! [ "$SC_VERSION" ]; then
+    export SC_VERSION=`cat __SCAFFOLD_INST_SUBST__/global/SC_VERSION`
+fi
+
+source __SCAFFOLD_INST_SUBST__/$SC_VERSION/bin/sc_wrapper

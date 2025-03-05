@@ -1,0 +1,13 @@
+
+
+
+# releasing a software set, with contents
+sset_release sset --project revlens --config inst/Linux/sc_config.json core
+sset_release sset --project revlens --config inst/Linux/sc_config.json gui
+
+# gui sset from revlens to stickman
+sset_release link --project stickman --sset gui --build_version 1 --sset_project revlens --release_num 1
+
+
+# maya
+sset_release link --project stickman --sset maya --build_version 1 --release_num 2
